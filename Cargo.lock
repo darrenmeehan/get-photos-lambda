@@ -565,6 +565,23 @@ dependencies = [
 ]
 
 [[package]]
+name = "get-photos-lambda"
+version = "0.1.0"
+dependencies = [
+ "lambda",
+ "lambda_runtime_client",
+ "log",
+ "rusoto",
+ "rusoto_core",
+ "rusoto_dynamodb",
+ "serde",
+ "serde_derive",
+ "serde_json",
+ "simple_logger",
+ "tokio 0.2.20",
+]
+
+[[package]]
 name = "getrandom"
 version = "0.1.14"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -1362,23 +1379,6 @@ name = "regex-syntax"
 version = "0.6.17"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "7fe5bd57d1d7414c6b5ed48563a2c855d995ff777729dcd91c369ec7fea395ae"
-
-[[package]]
-name = "register-on-upload"
-version = "0.1.0"
-dependencies = [
- "lambda",
- "lambda_runtime_client",
- "log",
- "rusoto",
- "rusoto_core",
- "rusoto_dynamodb",
- "serde",
- "serde_derive",
- "serde_json",
- "simple_logger",
- "tokio 0.2.20",
-]
 
 [[package]]
 name = "remove_dir_all"

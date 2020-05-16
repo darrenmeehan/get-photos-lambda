@@ -1,6 +1,8 @@
-# register-on-upload
+# get-photos-lambda
 
-Simple AWS Lambda to document sent images in a DB.
+AWS Lambda to retrieves images from Photos DB.
+
+It is intended for this to integration an HTTP API with DynamoDB.
 
 ## Test
 
@@ -27,7 +29,7 @@ $ cargo build --release --target x86_64-unknown-linux-musl
 To build the AWS Lambda zip file
 
 ```commandline
-$ cp ./target/x86_64-unknown-linux-musl/release/register-on-upload ./bootstrap && zip lambda.zip bootstrap && rm bootstrap
+$ cp ./target/x86_64-unknown-linux-musl/release/get-photos-lambda ./bootstrap && zip lambda.zip bootstrap && rm bootstrap
 ```
 
 ## Deployment
@@ -35,11 +37,11 @@ $ cp ./target/x86_64-unknown-linux-musl/release/register-on-upload ./bootstrap &
 Create AWS Lambda for the first time
 
 ```commandline
-$ aws lambda create-function --function-name registerOnUpload \
+$ aws lambda create-function --function-name get-photos \
   --handler not.used.in.rust \
   --zip-file fileb://./lambda.zip \
   --runtime provided \
-  --role arn:aws:iam::XXXXXXXXXXXXX:role/your_lambda_execution_role \
+  --role arn:aws:iam::409276471434:role/get-photos-lambda \
   --environment Variables={RUST_BACKTRACE=1} \
   --tracing-config Mode=Active
 ```
@@ -47,7 +49,7 @@ $ aws lambda create-function --function-name registerOnUpload \
 To update the code of an existing AWS Lambda
 
 ```commandline
-$ aws lambda update-function-code --function-name registerOnUpload \
+$ aws lambda update-function-code --function-name get-photos \
 --zip-file fileb://./lambda.zip
 ```
 
@@ -56,7 +58,7 @@ $ aws lambda update-function-code --function-name registerOnUpload \
 To test your deployed AWS Lambda works correctly
 
 ```commandline
-$ aws lambda invoke --function-name registerOnUpload \
+$ aws lambda invoke --function-name get-photos \
   --cli-binary-format raw-in-base64-out \
   --payload '{"firstName": "world"}' \
   output.json
