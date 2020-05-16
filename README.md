@@ -4,6 +4,8 @@ Simple AWS Lambda to document sent images in a DB.
 
 ## Test
 
+Currently, there are no tests for this code. Pure cowboy stuff at the moment!
+
 ```commandline
 cargo test
 ```
