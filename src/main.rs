@@ -3,6 +3,7 @@ extern crate log;
 extern crate simple_logger;
 use lambda::lambda;
 use serde_json::Value;
+use serde_json::json;
 
 type Error = Box<dyn std::error::Error + Send + Sync + 'static>;
 
@@ -14,5 +15,8 @@ async fn main(event: Value) -> Result<Value, Error> {
     info!("This is an example info message.");
     warn!("This is an example warn message.");
     error!("This is an example error message.");
-    Ok(event)
+
+    let message = json!("Hello from Lambda");
+
+    Ok(message)
 }
