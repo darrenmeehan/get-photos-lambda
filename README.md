@@ -2,7 +2,7 @@
 
 AWS Lambda to retrieves images from Photos DB.
 
-It is intended for this to integration an HTTP API with DynamoDB.
+It is intended for this to be an integration an HTTP API with DynamoDB.
 
 ## Test
 
