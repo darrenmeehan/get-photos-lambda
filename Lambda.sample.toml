@@ -1,0 +1,4 @@
+# This is a sample config file for
+[arns]
+dev = "arn:aws:lambda:eu-west-1:<ADD.YOUR.ACCOUNT.ID>:function:get-photos"
+

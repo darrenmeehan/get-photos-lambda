@@ -53,6 +53,19 @@ $ aws lambda update-function-code --function-name get-photos \
 --zip-file fileb://./lambda.zip
 ```
 
+# cargo aws-lambda
+
+To simplify the building and deployment use the following tool.
+
+```commandline
+$ cargo install cargo-aws-lambda
+
+$ cargo aws-lambda {your aws function's full ARN} {your-binary-name}
+```
+
+[For more information view](https://github.com/softprops/lambda-rust)
+
+
 ## Invoke AWS Lambda
 
 To test your deployed AWS Lambda works correctly
