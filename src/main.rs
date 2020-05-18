@@ -1,22 +1,20 @@
 #[macro_use]
-extern crate log;
-extern crate simple_logger;
 use lambda::lambda;
+extern crate tokio_core;
+
 use serde_json::Value;
-use serde_json::json;
+use get_photos_lambda::{get_photos, setup_logging};
 
 type Error = Box<dyn std::error::Error + Send + Sync + 'static>;
 
 #[lambda]
 #[tokio::main]
 async fn main(event: Value) -> Result<Value, Error> {
-    let logger = simple_logger::init();
-    match logger {
-        Ok(logger) => println!("Logger has been setup successfully"),
-        Err(error) => println!("Something went wrongs"),
-    };
-
-    let message = json!("Hello from Lambda");
-
-    Ok(message)
+    setup_logging();
+    let photos = get_photos().await;
+    //
+    // for photo in photos {
+    //     println!("{}", photo);
+    // }
+    Ok(event)
 }
