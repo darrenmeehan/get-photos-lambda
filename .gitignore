@@ -3,9 +3,12 @@
 
 # Configuration files
 *.env
+Lambda.toml
 
 # AWS Lambda zip file
 lambda.zip
 
-# Lambda invokation
+# Lambda invocation
 output.json
+
+.idea/
