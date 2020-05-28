@@ -353,13 +353,14 @@ checksum = "212d0f5754cb6769937f4501cc0e67f4f4483c8d2c3e1e922ee9edbe4ab4c7c0"
 
 [[package]]
 name = "dynomite"
-version = "0.8.0"
+version = "0.8.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "d463c165194e6f0ed24d5a5a7e296ff18d5f36b6ce922d4c6155984292c958a9"
+checksum = "6cda21bc22580e870ec8f9830ae1c37d961e4bb107566bb0ceaa579fe60aee9b"
 dependencies = [
  "again",
  "async-trait",
  "bytes 0.5.4",
+ "chrono",
  "dynomite-derive",
  "futures 0.3.4",
  "log",
@@ -370,9 +371,9 @@ dependencies = [
 
 [[package]]
 name = "dynomite-derive"
-version = "0.8.0"
+version = "0.8.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "7c6be0d59b4d8abb387dcb04a516ccde9d3a6c03674ca33bc943970c6cba4ca6"
+checksum = "2307b97c4840e577fd7eb75cdf81f33870c841dc5e885f021071e07a5ed63e91"
 dependencies = [
  "proc-macro2 1.0.10",
  "quote 1.0.3",
