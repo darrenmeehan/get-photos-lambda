@@ -359,7 +359,7 @@ dependencies = [
  "futures 0.3.4",
  "log",
  "rusoto_core 0.44.0",
- "rusoto_dynamodb 0.44.0",
+ "rusoto_dynamodb",
  "uuid",
 ]
 
@@ -608,7 +608,7 @@ dependencies = [
  "log",
  "rusoto",
  "rusoto_core 0.43.0",
- "rusoto_dynamodb 0.43.0",
+ "rusoto_dynamodb",
  "serde",
  "serde_derive",
  "serde_json",
@@ -1539,20 +1539,6 @@ dependencies = [
  "shlex",
  "tokio 0.2.21",
  "zeroize",
-]
-
-[[package]]
-name = "rusoto_dynamodb"
-version = "0.43.0"
-source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "686192bf4c9dbaa4514e9eed71c082b6a62ab458a20dec944ed245b731bbf0d3"
-dependencies = [
- "async-trait",
- "bytes 0.5.4",
- "futures 0.3.4",
- "rusoto_core 0.43.0",
- "serde",
- "serde_json",
 ]
 
 [[package]]
