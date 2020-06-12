@@ -607,7 +607,7 @@ dependencies = [
  "lambda_runtime_client",
  "log",
  "rusoto",
- "rusoto_core 0.43.0",
+ "rusoto_core 0.44.0",
  "rusoto_dynamodb 0.43.0",
  "serde",
  "serde_derive",
