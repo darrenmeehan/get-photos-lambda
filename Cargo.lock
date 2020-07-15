@@ -347,9 +347,9 @@ checksum = "212d0f5754cb6769937f4501cc0e67f4f4483c8d2c3e1e922ee9edbe4ab4c7c0"
 
 [[package]]
 name = "dynomite"
-version = "0.8.2"
+version = "0.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f669dc34fc1d7a48810cef479ff1aea09a3716117e828bfd5c55233ad936eea2"
+checksum = "5d1bd8830466d914ec9b3bfc9e99958c190cd16158e6aea76c5916806f6b1d40"
 dependencies = [
  "again",
  "async-trait",
@@ -365,10 +365,11 @@ dependencies = [
 
 [[package]]
 name = "dynomite-derive"
-version = "0.8.2"
+version = "0.9.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "f6ce468dd2c5c48368bd72163396f7cd472280e200d0a0164ffd1f9d72fd605b"
+checksum = "f98a29e8ef61733ec223b6170370edf939697df56f5aee2bee661d30c252fb8f"
 dependencies = [
+ "proc-macro-error 1.0.3",
  "proc-macro2 1.0.10",
  "quote 1.0.3",
  "syn 1.0.18",
@@ -582,7 +583,7 @@ version = "0.99.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "784f84eebc366e15251c4a8c3acee82a6a6f427949776ecb88377362a9621738"
 dependencies = [
- "proc-macro-error",
+ "proc-macro-error 0.4.12",
  "proc-macro-hack",
  "proc-macro2 1.0.10",
  "quote 1.0.3",
@@ -1221,7 +1222,20 @@ version = "0.4.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "18f33027081eba0a6d8aba6d1b1c3a3be58cbb12106341c2d5759fcd9b5277e7"
 dependencies = [
- "proc-macro-error-attr",
+ "proc-macro-error-attr 0.4.12",
+ "proc-macro2 1.0.10",
+ "quote 1.0.3",
+ "syn 1.0.18",
+ "version_check",
+]
+
+[[package]]
+name = "proc-macro-error"
+version = "1.0.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "fc175e9777c3116627248584e8f8b3e2987405cabe1c0adf7d1dd28f09dc7880"
+dependencies = [
+ "proc-macro-error-attr 1.0.3",
  "proc-macro2 1.0.10",
  "quote 1.0.3",
  "syn 1.0.18",
@@ -1233,6 +1247,19 @@ name = "proc-macro-error-attr"
 version = "0.4.12"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "8a5b4b77fdb63c1eca72173d68d24501c54ab1269409f6b672c85deb18af69de"
+dependencies = [
+ "proc-macro2 1.0.10",
+ "quote 1.0.3",
+ "syn 1.0.18",
+ "syn-mid",
+ "version_check",
+]
+
+[[package]]
+name = "proc-macro-error-attr"
+version = "1.0.3"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "3cc9795ca17eb581285ec44936da7fc2335a3f34f2ddd13118b6f4d515435c50"
 dependencies = [
  "proc-macro2 1.0.10",
  "quote 1.0.3",
