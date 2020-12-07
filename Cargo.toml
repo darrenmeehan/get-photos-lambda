@@ -22,5 +22,5 @@ rusoto_dynamodb = "0.43.0"
 rusoto_core = {version = "0.43.0"}
 simple_logger = "1.6.0"
 log = "0.4.8"
-tokio-core = "0.1.17"
+tokio-core = "0.1.18"
 dynomite = "0.8.2"
