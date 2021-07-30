@@ -20,7 +20,7 @@ rusoto = "0.24.2"
 rusoto_dynamodb = "0.43.0"
 #rusoto_core = {version = "0.43.0", default_features = false, features=["rustls"]}
 rusoto_core = {version = "0.43.0"}
-simple_logger = "1.6.0"
+simple_logger = "1.12.0"
 log = "0.4.8"
 tokio-core = "0.1.17"
 dynomite = "0.8.2"
